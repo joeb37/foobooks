@@ -15,10 +15,23 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/book/create', 'BookController@postCreate');
 
     Route::get('/practice', function() {
+        /*
         echo 'app.url: '.config('app.url');
         echo '<br>app.env: '.config('app.env');
 
-        return '';
+
+        $data = Array('foo' => 'bar');
+        Debugbar::info($data);
+        Debugbar::error('Error!');
+        Debugbar::warning('Watch out…');
+        Debugbar::addMessage('Another message', 'mylabel');
+
+        return 'Practice';
+        */
+
+        $random = new Rych\Random\Random();
+        return $random->getRandomString(10);
+
     });
 
 });
