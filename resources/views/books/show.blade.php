@@ -5,6 +5,7 @@
 @stop
 
 @section('head')
+    {{-- Custom css for this view--}}
     <link href="/css/book/show.css" rel="stylesheet">
 @stop
 
@@ -14,4 +15,9 @@
     @else
         <h1>No book chosen</h1>
     @endif
+@stop
+
+@section('body')
+    {{-- Custom JavaScript for this view--}}
+    <script src="/js/book/show.js" ></script>
 @stop

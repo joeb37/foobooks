@@ -17,6 +17,16 @@ class BookController extends Controller {
      * Responds to requests to GET /books/show/{id}
      */
     public function getShow($title = null) {
+        \Debugbar::info($title);
+        \Debugbar::error('Foobooks Error!');
+        \Debugbar::error('Foobooks Error!');
+        \Debugbar::error('Foobooks Error!');
+        \Debugbar::error('Foobooks Error!');
+        \Debugbar::error('Foobooks Error!');
+        \Debugbar::warning('Foobooks Watch out…');
+        \Debugbar::warning('Foobooks Watch out…');
+        \Debugbar::warning('Foobooks Watch out…');
+        \Debugbar::addMessage('Another message', 'mylabel');
         #return 'Show an individual book: '.$title;
         return view('books.show')->with('title', $title);
     }
